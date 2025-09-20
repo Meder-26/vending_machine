@@ -1,5 +1,7 @@
+import payment.CardAcceptor;
+
 public class Main {
     public static void main(String[] args) {
-        AppRunner.run();
+        AppRunner.run(new CardAcceptor());
     }
 }
