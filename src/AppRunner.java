@@ -41,7 +41,7 @@ public class AppRunner {
         print("Хотите пополнить баланс? (y/n)");
         if ("y".equalsIgnoreCase(fromConsole())) {
             paymentAcceptor.deposit();
-        };
+        }
 
         UniversalArray<Product> allowProducts = new UniversalArrayImpl<>();
         allowProducts.addAll(getAllowedProducts().toArray());
@@ -65,7 +65,7 @@ public class AppRunner {
         print(" h - Выйти");
         String action = fromConsole().substring(0, 1);
         if ("a".equalsIgnoreCase(action)) {
-            coinAcceptor.setAmount(coinAcceptor.getAmount() + 10);
+            paymentAcceptor.withdraw(paymentAcceptor.getBalance() + 10);
             print("Вы пополнили баланс на 10");
             return;
         }
